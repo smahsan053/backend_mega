@@ -1,0 +1,41 @@
+{
+  "name": "backend_mega", // The name of the project. Should be unique across npm.
+  "version": "1.0.0", // The current version of the project.
+  "description": "A backend system for a large-scale project similar to YouTube", // A short description of the project.
+  "main": "index.js", // The entry point for the application.
+  "type": "module", // Specifies the module type. 'module' enables ES6 modules.
+  "scripts": {
+    // npm scripts to automate tasks
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js" 
+    /*
+    "dev" script:
+    - `nodemon`: Monitors for changes in files and automatically restarts the node application.
+    - `-r dotenv/config`: Preloads dotenv to load environment variables from the .env file before running the app.
+    - `--experimental-json-modules`: Allows importing JSON modules in an ES module project.
+    - `src/index.js`: Path to the entry point of the application.
+    */
+  },
+  "keywords": [
+    "javascript",
+    "backend"
+  ],
+  /*
+  "keywords": An array of keywords that describe the project.
+  Useful for search indexing in package registries.
+  */
+  "author": "Ahsan", // The author of the project.
+  "license": "ISC", // The license for the project. ISC is a permissive license similar to MIT.
+  "devDependencies": {
+    // Development dependencies used during development but not in production
+    "nodemon": "^3.1.3", // Tool for automatically restarting the node application when file changes are detected.
+    "prettier": "^3.3.1" // Code formatter to ensure consistent code style across the project.
+  },
+  "dependencies": {
+    // Dependencies required for the project to run
+    "cookie-parser": "^1.4.6", // Middleware to parse cookies in request headers.
+    "cors": "^2.8.5", // Middleware for enabling Cross-Origin Resource Sharing (CORS) in the application.
+    "dotenv": "^16.4.5", // Module to load environment variables from a .env file into `process.env`.
+    "express": "^4.19.2", // Web framework for building RESTful APIs.
+    "mongoose": "^8.4.1" // Object Data Modeling (ODM) library for MongoDB and Node.js.
+  }
+}
