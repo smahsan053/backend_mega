@@ -8,7 +8,7 @@ const connectDB = async () => {
       `${process.env.MONGODB_URI}/${DB_NAME}`
     );
     /*
-    try =>
+    // try logging connectionInstance once & see what this
     console.log(connectionInstance);
     */
     // to check whether I'm connected to right host or not
