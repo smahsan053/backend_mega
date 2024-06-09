@@ -1,7 +1,7 @@
 {
   "name": "backend_mega",
   "version": "1.0.0",
-  "description": "A backend of mega project alike youtube",
+  "description": "A backend system for a large-scale project similar to YouTube",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
