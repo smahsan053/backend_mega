@@ -29,7 +29,7 @@ connectDB()
     // Start the server and listen on the specified port from the environment variable or default to port 8000.
     app.listen(process.env.PORT || 8000, () => {
       // Log a message to the console indicating that the server is running and on which port.
-      console.log(`Server is running at : ${process.env.PORT}`);
+      console.log(`Server is running at port : ${process.env.PORT}`);
     });
   })
   .catch((err) => {

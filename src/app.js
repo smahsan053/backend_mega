@@ -45,6 +45,13 @@ app.use(express.static("public"));
 // This adds a 'cookies' property to the request object, making it easier to read cookies.
 app.use(cookieParser());
 
+// routes import
+import userRouter from "./routes/user.routes.js";
+
+// routes declaration
+app.use("/api/v1/users", userRouter);
+// http://localhost:8000/api/v1/users/register
+
 // Exporting the 'app' instance for use in other modules.
 // This allows other parts of your application to use this configured Express app.
 export { app };

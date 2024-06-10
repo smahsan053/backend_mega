@@ -1,7 +1,7 @@
 // asyncHandler function: A utility to handle async route handlers
 const asyncHandler = (requestHandler) => {
   // Return a new function that wraps the provided request handler
-  (req, res, next) => {
+  return (req, res, next) => {
     // Use Promise.resolve to handle the request handler and catch errors
     Promise.resolve(requestHandler(req, res, next)).catch((err) => next(err));
   };
@@ -49,4 +49,3 @@ app.get('/example', asyncHandler(async (req, res) => {
   res.send(data);
 }));
 */
-
